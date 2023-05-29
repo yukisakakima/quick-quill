@@ -1,12 +1,8 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore bundler gems.
-vendor/bundle
-
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+# Ignore the specific database config file.
+/config/database.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
@@ -20,3 +16,26 @@ doc/
 .DS_Store
 .idea
 .secret
+
+# Ignore bundler gems.
+/vendor/bundle
+
+# Ignore application's specific configuration file
+/config/credentials.yml.enc
+/config/master.key
+
+# Ignore files related to IDE
+/.vscode
+/.idea/
+/.rubymine*
+/.ruby-version
+/.ruby-gemset
+
+# Ignore MacOS system files
+.DS_Store
+
+# Ignore node modules
+/node_modules
+
+# Ignore precompiled assets for production environment
+/public/assets
