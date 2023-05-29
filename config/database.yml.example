@@ -1,10 +1,11 @@
+# config/database.yml.example
 default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: kima8716
-  password: G48rBest
-  host: localhost
+  host: <%= ENV['DB_HOST'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
 development:
   <<: *default
@@ -17,5 +18,3 @@ test:
 production:
   <<: *default
   database: quick_quill_production
-  username: production_username
-  password: <%= ENV['QUICK_QUILL_DATABASE_PASSWORD'] %>
