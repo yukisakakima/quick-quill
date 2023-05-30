@@ -213,6 +213,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    terser (1.1.15)
+      execjs (>= 0.3.0, < 3)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -225,8 +227,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    uglifier (4.2.0)
-      execjs (>= 0.3.0, < 3)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -267,10 +267,10 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   stimulus-rails
+  terser
   turbo-rails
   turbolinks
   tzinfo-data
-  uglifier
   web-console
   webdrivers
 
