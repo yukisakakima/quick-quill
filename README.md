@@ -1,9 +1,17 @@
-# README
+# Quick Quill
+## Description :
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## View :
 
-Things you may want to cover:
+## Site URL :
+[Quick Quill](https://quick-quill.herokuapp.com/)
+
+## Languages and Tools :
+- HTML
+- CSS
+- Ruby
+  - Rails
+- Heroku
 
 * Ruby version
 3.1.4
@@ -21,4 +29,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+## Structure :

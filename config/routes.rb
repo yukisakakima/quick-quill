@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+
+  root 'home#top'
+  resources :users, only: [:show, :edit, :update]
   post "users/:id/update" => "users#update"
-  get "users/:id/edit" => "users#edit"
-  post "users/create" => "users#create"
-  get "signup" => "users#new"
-  get "users/:id" => "users#show"
-  post "login" => "users#login"
-  post "logout" => "users#logout"
-  get "login" => "users#login_form"
 
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
@@ -16,6 +15,7 @@ Rails.application.routes.draw do
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
 
-  get "/" => "home#top"
   get "about" => "home#about"
+
+  get 'dashboard', to: 'home#dashboard'
 end

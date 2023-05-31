@@ -1,6 +1,6 @@
 <div class="main users-new">
   <div class="account-form-container">
-    <div class="form-heading">ログイン</div>
+    <h2 class="form-heading">ログイン</h2>
     <div class="form users-form">
       <div class="form-body">
         <% if @error_message %>
@@ -8,13 +8,14 @@
             <%= @error_message %>
           </div>
         <% end %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
 
-        <%= form_tag("/login") do %>
-          <p>メールアドレス</p>
-          <input name="email" value="<%= @email %>">
-          <p>パスワード</p>
-          <input type="password" name="password" value="<%= @password %>">
-          <input type="submit" value="ログイン">
+          <%= f.label :password %>
+          <%= f.password_field :password, autocomplete: "current-password" %>
+
+          <%= f.submit "ログイン" %>
         <% end %>
       </div>
     </div>

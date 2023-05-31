@@ -1,0 +1,12 @@
+ja:
+  hello: "こんにちは"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              invalid: "は有効なメールアドレスではありません"
+              taken: "はすでに登録されているメールアドレスです"
+            password:
+              too_short: "を8文字以上にして下さい"
