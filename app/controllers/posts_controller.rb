@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    # @user = User.find_by(id: params[:id])
-    @posts = Post.all.order(created_at: :desc)
+    @posts = current_user.posts.order(created_at: :desc)
   end
 
   def show
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(
       content: params[:content],
-      user_id: @current_user.id
+      user_id: current_user.id
     )
     if @post.save
       flash[:notice] = "投稿を作成しました"
