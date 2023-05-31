@@ -1,9 +1,15 @@
 <div class="main posts-index">
   <div class="container">
-    <% @posts.each do |post| %>
+    <% if @posts.blank? %>
       <div class="posts-index-item">
-        <%= link_to(post.content, "/posts/#{post.id}") %>
+        <p class="announce-text">まだノートがありません</p>
       </div>
+    <% else %>
+      <% @posts.each do |post| %>
+        <div class="posts-index-item">
+          <%= link_to(post.content, "/posts/#{post.id}") %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
