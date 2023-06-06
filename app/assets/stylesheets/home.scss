@@ -108,19 +108,6 @@ header {
   color: white;
 }
 
-.header-menus .fa {
-  padding-right: 5px;
-}
-
-.header-menus input[type="submit"] {
-  padding: 0 20px;
-  float: left;
-  line-height: 64px;
-  color: white;
-  margin: 0;
-  font-size: 13px;
-}
-
 /* top ================================ */
 .top-main {
   padding: 200px 0 100px;
@@ -155,7 +142,8 @@ header {
 
 /* about ================================ */
 .about-main {
-  padding: 180px 8% 0;
+  display: flex;
+  padding: 100px 8% 0;
   color: white;
 }
 
@@ -170,8 +158,19 @@ header {
   font-size: 20px;
 }
 
+.left-column {
+  width: 50%;
+  padding: 10px;
+}
+
+.right-column {
+  width: 50%;
+  padding: 10px;
+}
+
 .about-img {
-  width: 84%;
+  max-width: 100%;
+  height: auto;
 }
 
 /* フォーム================================ */
