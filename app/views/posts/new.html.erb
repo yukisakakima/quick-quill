@@ -1,7 +1,7 @@
 <div class="main posts-new">
   <div class="container">
     <h1 class="form-heading">記録する</h1>
-    <%= form_tag("/posts/create") do %>
+    <%= form_with model: @post, url: "/posts/create" do |f| %>
       <div class="form">
         <div class="form-body">
           <% @post.errors.full_messages.each do |message| %>
@@ -9,7 +9,10 @@
               <%= message %>
             </div>
           <% end %>
-          <textarea name="content" cols="30" rows="10"><%= @post.content %></textarea>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+          <%= f.label :content %>
+          <%= f.text_area :content, cols: "30", rows: "10" %>
           <input type="submit" value="保存">
         </div>
       </div>

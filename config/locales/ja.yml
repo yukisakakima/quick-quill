@@ -1,8 +1,20 @@
 ja:
-  hello: "こんにちは"
   activerecord:
+    attributes:
+      post:
+        title: "タイトル"
+        content: "内容"
+      user:
+        name: "ユーザー名"
     errors:
       models:
+        post:
+          attributes:
+            title:
+              blank: "を入力してください"
+              too_long: "は38文字以内で入力してください"
+            content:
+              blank: "を入力してください"
         user:
           attributes:
             email:
@@ -10,3 +22,7 @@ ja:
               taken: "はすでに登録されているメールアドレスです"
             password:
               too_short: "を8文字以上にして下さい"
+  errors:
+    messages:
+      blank: "を入力してください"
+      too_long: "は%{count}文字以内で入力してください"
