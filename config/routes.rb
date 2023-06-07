@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   }
 
   root 'home#top'
+  get "about" => "home#about"
   resources :users, only: [:show, :edit, :update]
   post "users/:id/update" => "users#update"
 
@@ -14,8 +15,6 @@ Rails.application.routes.draw do
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
-
-  get "about" => "home#about"
 
   get 'dashboard', to: 'home#dashboard'
 end
