@@ -4,6 +4,8 @@ ja:
       post:
         title: "タイトル"
         content: "内容"
+        reference_title: "リファレンスタイトル"
+        reference_link: "リファレンスリンク"
       user:
         name: "ユーザー名"
     errors:

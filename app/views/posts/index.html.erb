@@ -6,9 +6,11 @@
       </div>
     <% else %>
       <% @posts.each do |post| %>
-        <div class="posts-index-item">
-          <%= link_to(post.title, "/posts/#{post.id}", class: 'post-title') %>
-        </div>
+        <%= link_to("/posts/#{post.id}") do %>
+          <div class="posts-index-item">
+            <h2 class="post-title"><%= post.title %></h2>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
