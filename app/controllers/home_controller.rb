@@ -7,9 +7,6 @@ class HomeController < ApplicationController
   def about
   end
 
-  def dashboard
-  end
-
   private
 
   def redirect_if_signed_in
