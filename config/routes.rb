@@ -15,6 +15,4 @@ Rails.application.routes.draw do
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
-
-  get 'dashboard', to: 'home#dashboard'
 end
