@@ -1,4 +1,8 @@
 ja:
+  devise:
+    failure:
+      not_found_in_database: "メールアドレスまたはパスワードが無効です"
+      invalid: "メールアドレスまたはパスワードが無効です"
   activerecord:
     attributes:
       post:
