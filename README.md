@@ -24,7 +24,7 @@
 - CSS
 ### バックエンド
 - Ruby 3.1.4
- - Rails 7.0.4.3
+- Rails 7.0.4.3
 ### インフラ
 - Heroku
 - PostgreSQL
