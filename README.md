@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Ruby-v3.1.4-red)
 ![](https://img.shields.io/badge/Rails-v7.0.4.3-red)
 ## サービス概要 :
-このアプリは**「素早く学びを知識に」**をコンセプトにしたノートアプリです。
+このアプリは**素早く学びを知識に**をコンセプトにしたノートアプリです。
 
 ## ビュー :
 <img src="app/assets/images/quick-quill-home-image.png">
@@ -11,8 +11,8 @@
 [Quick Quill](https://quick-quill.herokuapp.com/)
 
 ## ユーザーが抱える課題 :
-- 見やすいノートを制作したい。
-- リファレンスをしっかり残して、ノート、メモを取りたい。
+- 見返した時に、見やすいノートを制作したい。
+- リファレンスをしっかり残して、ノートを取りたい。
 
 ## アプリの機能 :
 簡単にMarkdown記法を用いて、見出し機能などのマークアップでわかりやすいノートを作成することが出来ます。<br>
