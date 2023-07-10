@@ -6,6 +6,8 @@
 
 ## ビュー :
 <img src="app/assets/images/quick-quill-home-image.png">
+<img src="app/assets/images/quick-quill-about-image.png">
+
 
 ## サイトURL :
 [Quick Quill](https://quick-quill.herokuapp.com/)
