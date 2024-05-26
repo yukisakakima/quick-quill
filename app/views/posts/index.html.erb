@@ -1,0 +1,17 @@
+<div class="main posts-index">
+  <div class="container">
+    <% if @posts.blank? %>
+      <div class="posts-index-item">
+        <p class="announce-text">まだノートがありません</p>
+      </div>
+    <% else %>
+      <% @posts.each do |post| %>
+        <%= link_to("/posts/#{post.id}") do %>
+          <div class="posts-index-item">
+            <h2 class="post-title"><%= post.title %></h2>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

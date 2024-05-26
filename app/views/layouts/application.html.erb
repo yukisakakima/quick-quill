@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quick Quill</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= favicon_link_tag('favicon.ico') %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <% if user_signed_in? %>
+          <%= link_to("Quick Quill", "/posts/index") %>
+        <% else %>
+          <%= link_to("Quick Quill", "/") %>
+        <% end %>
+      </div>
+      <ul class="header-menus">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to("記録する", "/posts/new") %>
+          </li>
+          <li>
+            <%= link_to("一覧", "/posts/index") %>
+          </li>
+          <li>
+            <%= link_to(current_user.name, "/users/#{current_user.id}") %>
+          </li>
+          <li>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("Quick Quillとは", "/about") %>
+          </li>
+          <li>
+            <%= link_to("新規登録", new_user_registration_path) %>
+          </li>
+          <li>
+            <%= link_to "ログイン", new_user_session_path %>
+          </li>
+        <% end %>
+      </ul>
+    </header>
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

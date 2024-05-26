@@ -1,0 +1,25 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">編集する</h1>
+    <%= form_with model: @post, url: "/posts/#{@post.id}/update", method: :post do |f| %>
+      <div class="form">
+        <div class="form-body">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <%= f.label :title %>
+          <%= f.text_field :title, class: "post-title" %>
+          <%= f.label :content %>
+          <%= f.text_area :content, cols: "30", rows: "10" %>
+          <%= f.label :reference_title %>
+          <%= f.text_field :reference_title %>
+          <%= f.label :reference_link %>
+          <%= f.text_field :reference_link %>
+          <input type="submit" value="変更を保存">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

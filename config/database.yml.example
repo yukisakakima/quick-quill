@@ -1,0 +1,20 @@
+# config/database.yml.example
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['DB_HOST'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: quick_quill_development
+
+test:
+  <<: *default
+  database: quick_quill_test
+
+production:
+  <<: *default
+  database: quick_quill_production
